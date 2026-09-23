@@ -1,0 +1,538 @@
+:root {
+    --bg-color: #0b1120;
+    --card-bg: #1e293b;
+    --card-inner-bg: #151e2e;
+    --accent-color: #38bdf8;
+    --accent-hover: #0284c7;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --border-color: #334155;
+
+    /* Кольори для розкладу */
+    --lk-bg: #fffde7;
+    --lk-border: #fef08a;
+    --lb-bg: #e0f2fe;
+    --lb-border: #bae6fd;
+    --pz-bg: #dcfce7;
+    --pz-border: #bbf7d0;
+    --cell-text: #0f172a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    color: #7dd3fc;
+}
+
+/* Header & Navigation */
+header {
+    background-color: rgba(15, 23, 42, 0.9);
+    border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 18px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 12px;
+}
+
+nav a {
+    color: var(--text-muted);
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+nav a:hover {
+    color: var(--text-main);
+}
+
+nav a.active {
+    color: var(--text-main);
+    background-color: rgba(51, 65, 85, 0.6);
+}
+
+main {
+    flex: 1;
+    padding: 30px 0;
+}
+
+/* Headings & Section Styling */
+.page-header, .hero {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.page-header h2, .hero h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 12px;
+}
+
+.page-header p, .hero p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 35px;
+}
+
+section h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+section h2::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 22px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+
+/* Profile / Info Card (Исправление переноса фото) */
+.info-card, .profile-card {
+    background-color: var(--card-bg);
+    padding: 28px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 25px;
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+.profile-main {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+    width: 100%;
+}
+
+/* Фиксация размера аватарки */
+.info-card img, 
+.profile-card img, 
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    max-width: 150px;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1.5px solid var(--accent-color);
+    flex-shrink: 0;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-info h3, 
+.info-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--text-main);
+}
+
+.badge {
+    display: inline-block;
+    background-color: rgba(56, 189, 248, 0.12);
+    color: var(--accent-color);
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.profile-info p, 
+.info-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Lists */
+.bio-list {
+    list-style: none;
+}
+
+.bio-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 12px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.bio-list li::before {
+    content: "►";
+    position: absolute;
+    left: 0;
+    top: 1px;
+    color: var(--accent-color);
+    font-size: 0.7rem;
+}
+
+.bio-list strong {
+    color: var(--text-main);
+}
+
+/* Skills Grid */
+.skills-intro {
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.skill-item {
+    background-color: var(--card-inner-bg);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(51, 65, 85, 0.7);
+}
+
+.skill-item h4 {
+    color: var(--accent-color);
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+}
+
+.skill-item p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Cards & Grid (labs.html, practicals.html, index.html) */
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.work-card {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.work-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-color);
+}
+
+.work-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.work-number {
+    background-color: rgba(56, 189, 248, 0.1);
+    color: var(--accent-color);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.work-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: var(--text-main);
+    font-weight: 700;
+}
+
+.work-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.work-card a, 
+.info-card a {
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: auto;
+}
+
+/* Forms (lab1.html) */
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    color: var(--accent-color);
+}
+
+.form-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 35px 40px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-card h2 {
+    text-align: center;
+    font-size: 1.75rem;
+    color: var(--accent-color);
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    color: var(--text-main);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-inner-bg);
+    color: var(--text-main);
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input::placeholder {
+    color: #475569;
+}
+
+input:focus, select:focus {
+    border-color: var(--accent-color);
+}
+
+input[type="submit"] {
+    background-color: #38bdf8;
+    color: #0f172a;
+    border: none;
+    padding: 14px;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0284c7;
+    color: #ffffff;
+}
+
+/* Timetable (practical-1.html) */
+.table-wrapper {
+    overflow-x: auto;
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 6px;
+    min-width: 900px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+th.date-header {
+    background-color: #0284c7;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border-radius: 4px;
+}
+
+td.day-header {
+    background-color: #0369a1;
+    color: #ffffff;
+    font-weight: 700;
+    width: 45px;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+
+td.time-cell {
+    background-color: rgba(15, 23, 42, 0.6);
+    color: var(--text-main);
+    font-weight: 600;
+    font-size: 0.8rem;
+    width: 95px;
+    line-height: 1.3;
+    border-radius: 4px;
+}
+
+.lesson {
+    border-radius: 6px;
+    padding: 10px 8px;
+    color: var(--cell-text);
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.lesson.lk {
+    background-color: var(--lk-bg);
+    border: 1px solid var(--lk-border);
+}
+
+.lesson.lb {
+    background-color: var(--lb-bg);
+    border: 1px solid var(--lb-border);
+}
+
+.lesson.pz {
+    background-color: var(--pz-bg);
+    border: 1px solid var(--pz-border);
+}
+
+.lesson-title {
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.lesson-aud {
+    font-size: 0.75rem;
+    color: #475569;
+}
+
+.lesson-teacher {
+    font-size: 0.75rem;
+    font-style: italic;
+    color: #334155;
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid var(--border-color);
+    background-color: var(--bg-color);
+    padding: 25px 0;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 4px 0;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .info-card, 
+    .profile-card, 
+    .profile-main {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
