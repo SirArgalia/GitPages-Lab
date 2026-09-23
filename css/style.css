@@ -535,4 +535,96 @@ footer p {
     .skills-grid {
         grid-template-columns: 1fr;
     }
+}/* ==========================================
+   Практична робота №2 — Стилізація веб-форми
+   ========================================== */
+
+.form-card {
+    /* a. Колір фону та тексту */
+    background-color: #1e1b4b; /* Темно-фіолетовий фон */
+    color: #f1f5f9;            /* Світло-сірий/білий колір тексту */
+
+    /* b. Ширина та внутрішні відступи */
+    max-width: 480px;          /* Ширина форми */
+    padding: 32px 28px;        /* Внутрішні відступи зі всіх боків */
+
+    /* c. Закруглені кути */
+    border-radius: 16px;       /* Закруглення кутів картки */
+
+    /* d. Тінь */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5); /* М'яка виражена тінь */
+
+    /* e. Позиціювання */
+    margin: 30px auto;         /* Центрування по горизонталі та відступи зверху/знизу */
+    position: relative;        /* Відносне позиціювання */
+
+    border: 1px solid #4338ca;  /* Додаткова рамка */
+}
+
+/* Елементи всередині форми під колірну гаму */
+.form-card h2 {
+    color: #818cf8; /* Колір заголовка */
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.form-card input[type="text"],
+.form-card input[type="email"],
+.form-card input[type="password"],
+.form-card input[type="date"],
+.form-card select {
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    color: #ffffff;
+    border-radius: 8px; /* Закруглені кути для полів */
+    padding: 10px 12px;
+}
+
+.form-card input:focus,
+.form-card select:focus {
+    border-color: #818cf8;
+    box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.25);
+}
+
+.form-card input[type="submit"] {
+    background-color: #6366f1; /* Фіолетова кнопка */
+    color: #ffffff;
+    border-radius: 8px;        /* Закруглення кнопки */
+    padding: 12px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.form-card input[type="submit"]:hover {
+    background-color: #4f46e5;
+}
+
+
+.form-card {
+    background-color: #1e1b4b; 
+    border: 1px solid #4338ca;  
+}
+
+
+.form-card h2 {
+    color: #818cf8; 
+}
+
+
+.form-card input:focus,
+.form-card select:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+}
+
+
+.form-card input[type="submit"] {
+    background-color: #6366f1; 
+    color: #ffffff;
+}
+
+.form-card input[type="submit"]:hover {
+    background-color: #4f46e5; 
 }
