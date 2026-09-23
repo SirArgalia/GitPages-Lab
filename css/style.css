@@ -8,7 +8,7 @@
     --text-muted: #94a3b8;
     --border-color: #334155;
 
-    /* Кольори для розкладу */
+  
     --lk-bg: #fffde7;
     --lk-border: #fef08a;
     --lb-bg: #e0f2fe;
@@ -51,7 +51,7 @@ a:hover {
     color: #7dd3fc;
 }
 
-/* Header & Navigation */
+
 header {
     background-color: rgba(15, 23, 42, 0.9);
     border-bottom: 1px solid rgba(51, 65, 85, 0.5);
@@ -101,7 +101,7 @@ main {
     padding: 30px 0;
 }
 
-/* Headings & Section Styling */
+
 .page-header, .hero {
     text-align: center;
     margin-bottom: 35px;
@@ -144,7 +144,7 @@ section h2::before {
     border-radius: 2px;
 }
 
-/* Profile / Info Card (Исправление переноса фото) */
+
 .info-card, .profile-card {
     background-color: var(--card-bg);
     padding: 28px;
@@ -163,7 +163,7 @@ section h2::before {
     width: 100%;
 }
 
-/* Фиксация размера аватарки */
+
 .info-card img, 
 .profile-card img, 
 .profile-photo {
@@ -208,7 +208,7 @@ section h2::before {
     margin-bottom: 10px;
 }
 
-/* Lists */
+
 .bio-list {
     list-style: none;
 }
@@ -234,7 +234,7 @@ section h2::before {
     color: var(--text-main);
 }
 
-/* Skills Grid */
+
 .skills-intro {
     color: var(--text-muted);
     margin-bottom: 20px;
@@ -266,7 +266,7 @@ section h2::before {
     line-height: 1.5;
 }
 
-/* Cards & Grid (labs.html, practicals.html, index.html) */
+
 .works-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -330,7 +330,7 @@ section h2::before {
     margin-top: auto;
 }
 
-/* Forms (lab1.html) */
+
 .back-link {
     display: inline-flex;
     align-items: center;
@@ -413,7 +413,7 @@ input[type="submit"]:hover {
     color: #ffffff;
 }
 
-/* Timetable (practical-1.html) */
+
 .table-wrapper {
     overflow-x: auto;
     background-color: var(--card-bg);
@@ -502,7 +502,7 @@ td.time-cell {
     color: #334155;
 }
 
-/* Footer */
+
 footer {
     border-top: 1px solid var(--border-color);
     background-color: var(--bg-color);
@@ -517,7 +517,7 @@ footer p {
     margin: 4px 0;
 }
 
-/* Адаптивность для мобильных устройств */
+
 @media (max-width: 768px) {
     header .container {
         flex-direction: column;
