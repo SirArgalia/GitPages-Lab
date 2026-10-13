@@ -1,79 +1,80 @@
-li:first-child {
-font-weight: bold;
-}
-
-
-a:last-child {
-color: red;
-}
-
-
-input:disabled {
-background-color: gray;
-}
-
-
-div > p {
-font-weight: 600;
-}
-
-
-a[href^="https"] {
-color: green;
-}
-
-
-input[type="text"] {
-border: 1px solid blue;
-}
-
-
-li:first-child,
-li:last-child {
-font-size: 24px;
-}
-
-
-div p {
-font-size: 16px;
-}
-
-
-input:checked {
-accent-color: lightblue;
-}
-
-
-li > a {
-text-decoration: underline;
-}
-
-
-li:nth-child(even) {
-font-weight: bold;
-}
-
 
 input[type="text"]:not(:disabled) {
-background-color: gray;
-}
-
-
-p:first-child {
-font-size: 24px;
-}
-
-
-li.special + li {
-text-decoration: line-through;
+    background-color: gray;
 }
 
 
 p::first-letter {
-font-size: 36px;
+    font-size: 36px;
+}
+
+
+a:last-child {
+    color: red;
+}
+
+
+li.special + li {
+    text-decoration: line-through;
+}
+
+
+input[type="text"] {
+    border: 1px solid blue;
+}
+
+
+p:first-child {
+    font-size: 24px;
+}
+
+
+a[href^="https"] {
+    color: green;
+}
+
+
+div > p {
+    font-weight: 600;
+}
+
+
+li:first-child, 
+li:last-child {
+    font-size: 24px;
 }
 
 
 a::after {
-content: " ↗";
+    content: " ↗";
+}
+
+
+input:disabled {
+    background-color: gray;
+}
+
+
+div p {
+    font-size: 16px;
+}
+
+
+li:first-child {
+    font-weight: bold;
+}
+
+
+li > a {
+    text-decoration: underline;
+}
+
+
+input:checked {
+    accent-color: lightblue;
+}
+
+
+li:nth-child(even) {
+    font-weight: bold;
 }
