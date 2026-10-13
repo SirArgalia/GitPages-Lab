@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практична робота №2 — Шнайдер Даниїл</title>
+   
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Шнайдер Даниїл</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Головна</a></li>
+                    <li><a href="../html/about-me.html">Про мене</a></li>
+                    <li><a href="practicals.html" class="active">Практичні роботи</a></li>
+                    <li><a href="../labs/labs.html">Лабораторні заняття</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <a href="practicals.html" class="back-link">&larr; Повернутися до списку практичних</a>
+
+        <section class="intro-card">
+            <h2>Практична робота №2</h2>
+            <p><strong>Тема:</strong> Стилізація веб-форми з Лабораторної роботи №1 за допомогою CSS.</p>
+        </section>
+
+     
+        <div class="form-card">
+            <h2>Реєстрація користувача</h2>
+            <form>
+                <div class="form-group">
+                    <label for="fname">Ім'я *</label>
+                    <input type="text" id="fname" placeholder="Введіть ім'я" required
+                           oninvalid="this.setCustomValidity('Будь ласка, заповніть це поле')"
+                           oninput="this.setCustomValidity('')">
+                </div>
+
+                <div class="form-group">
+                    <label for="lname">Прізвище *</label>
+                    <input type="text" id="lname" placeholder="Введіть прізвище" required
+                           oninvalid="this.setCustomValidity('Будь ласка, заповніть це поле')"
+                           oninput="this.setCustomValidity('')">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Електронна пошта *</label>
+                    <input type="email" id="email" placeholder="example@mail.com" required
+                           oninvalid="this.setCustomValidity('Будь ласка, введіть коректну електронну пошту')"
+                           oninput="this.setCustomValidity('')">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Пароль *</label>
+                    <input type="password" id="password" placeholder="Введіть пароль" required
+                           oninvalid="this.setCustomValidity('Будь ласка, заповніть це поле')"
+                           oninput="this.setCustomValidity('')">
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Дата народження</label>
+                    <input type="date" id="dob">
+                </div>
+
+                <div class="form-group">
+                    <label for="gender">Стать</label>
+                    <select id="gender">
+                        <option value="">-- Оберіть стать --</option>
+                        <option value="male">Чоловіча</option>
+                        <option value="female">Жіноча</option>
+                    </select>
+                </div>
+
+                <input type="submit" value="Зареєструватися">
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Шнайдер Даниїл. Всі права захищено.</p>
+    </footer>
+
+</body>
+</html>
