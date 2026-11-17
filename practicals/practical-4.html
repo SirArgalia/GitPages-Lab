@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практична робота №4 — Fullsize Клавіатура</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/practical-4.css">
+</head>
+<body>
+
+    <div class="page-wrapper">
+        <header class="top-nav">
+            <a href="practicals.html" class="back-link">← До практичних робіт</a>
+            <h1>Практична робота №4 — Fullsize Клавіатура (CSS Grid)</h1>
+        </header>
+
+
+        <div class="keyboard-wrapper">
+            <div class="cable"></div>
+            
+            <div class="keyboard">
+      
+                <div class="top-row-grid">
+                    <button class="key esc">Esc</button>
+                    
+                    <div class="f-group">
+                        <button class="key">F1</button>
+                        <button class="key">F2</button>
+                        <button class="key">F3</button>
+                        <button class="key">F4</button>
+                    </div>
+
+                    <div class="f-group">
+                        <button class="key">F5</button>
+                        <button class="key">F6</button>
+                        <button class="key">F7</button>
+                        <button class="key">F8</button>
+                    </div>
+
+                    <div class="f-group">
+                        <button class="key">F9</button>
+                        <button class="key">F10</button>
+                        <button class="key">F11</button>
+                        <button class="key">F12</button>
+                    </div>
+
+                    <div class="sys-group">
+                        <button class="key small-text">PrtSc<br><span>SysRq</span></button>
+                        <button class="key small-text">Scroll<br><span>Lock</span></button>
+                        <button class="key small-text">Pause<br><span>Break</span></button>
+                    </div>
+
+                    <div class="leds-panel">
+                        <div class="led-item">
+                            <span>1</span>
+                            <div class="led active"></div>
+                        </div>
+                        <div class="led-item">
+                            <span>A</span>
+                            <div class="led"></div>
+                        </div>
+                        <div class="led-item">
+                            <span>⬇</span>
+                            <div class="led"></div>
+                        </div>
+                    </div>
+                </div>
+
+          
+                <div class="lower-sections-grid">
+                    
+            
+                    <div class="main-block-grid">
+               
+                        <button class="key dual"><span>~</span><span>`</span></button>
+                        <button class="key dual"><span>!</span><span>1</span></button>
+                        <button class="key dual"><span>@</span><span>2</span></button>
+                        <button class="key dual"><span>#</span><span>3</span></button>
+                        <button class="key dual"><span>$</span><span>4</span></button>
+                        <button class="key dual"><span>%</span><span>5</span></button>
+                        <button class="key dual"><span>^</span><span>6</span></button>
+                        <button class="key dual"><span>&amp;</span><span>7</span></button>
+                        <button class="key dual"><span>*</span><span>8</span></button>
+                        <button class="key dual"><span>(</span><span>9</span></button>
+                        <button class="key dual"><span>)</span><span>0</span></button>
+                        <button class="key dual"><span>_</span><span>-</span></button>
+                        <button class="key dual"><span>+</span><span>=</span></button>
+                        <button class="key backspace">← Backspace</button>
+
+               
+                        <button class="key tab">Tab ⇄</button>
+                        <button class="key">Q</button>
+                        <button class="key">W</button>
+                        <button class="key">E</button>
+                        <button class="key">R</button>
+                        <button class="key">T</button>
+                        <button class="key">Y</button>
+                        <button class="key">U</button>
+                        <button class="key">I</button>
+                        <button class="key">O</button>
+                        <button class="key">P</button>
+                        <button class="key dual"><span>{</span><span>[</span></button>
+                        <button class="key dual"><span>}</span><span>]</span></button>
+                        <button class="key enter-iso">↵ Enter</button>
+
+               
+                        <button class="key caps">Caps Lock</button>
+                        <button class="key">A</button>
+                        <button class="key">S</button>
+                        <button class="key">D</button>
+                        <button class="key">F</button>
+                        <button class="key">G</button>
+                        <button class="key">H</button>
+                        <button class="key">J</button>
+                        <button class="key">K</button>
+                        <button class="key">L</button>
+                        <button class="key dual"><span>:</span><span>;</span></button>
+                        <button class="key dual"><span>"</span><span>'</span></button>
+                        <button class="key dual"><span>|</span><span>\</span></button>
+
+  
+                        <button class="key l-shift">⇧ Shift</button>
+                        <button class="key">Z</button>
+                        <button class="key">X</button>
+                        <button class="key">C</button>
+                        <button class="key">V</button>
+                        <button class="key">B</button>
+                        <button class="key">N</button>
+                        <button class="key">M</button>
+                        <button class="key dual"><span>&lt;</span><span>,</span></button>
+                        <button class="key dual"><span>&gt;</span><span>.</span></button>
+                        <button class="key dual"><span>?</span><span>/</span></button>
+                        <button class="key r-shift">⇧ Shift</button>
+
+             
+                        <button class="key ctrl-l">Ctrl</button>
+                        <button class="key win-l">❖</button>
+                        <button class="key alt-l">Alt</button>
+                        <button class="key space"></button>
+                        <button class="key alt-r">Alt Gr</button>
+                        <button class="key win-r">❖</button>
+                        <button class="key menu">▤</button>
+                        <button class="key ctrl-r">Ctrl</button>
+                    </div>
+
+               
+                    <div class="nav-section-grid">
+                        <div class="nav-cluster">
+                            <button class="key small-text">Ins</button>
+                            <button class="key small-text">Home</button>
+                            <button class="key small-text">PgUp</button>
+                            <button class="key small-text">Del</button>
+                            <button class="key small-text">End</button>
+                            <button class="key small-text">PgDn</button>
+                        </div>
+
+                        <div class="arrows-cluster">
+                            <button class="key arrow-up">↑</button>
+                            <button class="key arrow-left">←</button>
+                            <button class="key arrow-down">↓</button>
+                            <button class="key arrow-right">→</button>
+                        </div>
+                    </div>
+
+                 
+                    <div class="numpad-grid">
+                        <button class="key small-text">Num<br>Lock</button>
+                        <button class="key">/</button>
+                        <button class="key">*</button>
+                        <button class="key">-</button>
+
+                        <button class="key dual"><span>7</span><span class="sub">Home</span></button>
+                        <button class="key dual"><span>8</span><span class="sub">↑</span></button>
+                        <button class="key dual"><span>9</span><span class="sub">PgUp</span></button>
+                        <button class="key num-plus">+</button>
+
+                        <button class="key dual"><span>4</span><span class="sub">←</span></button>
+                        <button class="key">5</button>
+                        <button class="key dual"><span>6</span><span class="sub">→</span></button>
+
+                        <button class="key dual"><span>1</span><span class="sub">End</span></button>
+                        <button class="key dual"><span>2</span><span class="sub">↓</span></button>
+                        <button class="key dual"><span>3</span><span class="sub">PgDn</span></button>
+                        <button class="key num-enter">Enter</button>
+
+                        <button class="key num-zero dual"><span>0</span><span class="sub">Ins</span></button>
+                        <button class="key dual"><span>.</span><span class="sub">Del</span></button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
